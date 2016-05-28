@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Moving : MonoBehaviour {
 
-	private float speed = 0.1f;
+	private float speed = 8f;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +18,7 @@ public class Moving : MonoBehaviour {
 			// Getting current position
 			Vector2 pos = this.transform.position;
 			// Changing position
-			pos.x += speed;
+			pos.x += speed * Time.deltaTime;
 			// Updating position
 			this.transform.position = pos;
 		}
@@ -27,7 +27,7 @@ public class Moving : MonoBehaviour {
 			// Getting current position
 			Vector2 pos = this.transform.position;
 			// Changing position
-			pos.x -= speed;
+			pos.x -= speed * Time.deltaTime;
 			// Updating position
 			this.transform.position = pos;
 		}
@@ -36,7 +36,7 @@ public class Moving : MonoBehaviour {
 			// Getting current position
 			Vector2 pos = this.transform.position;
 			// Changing position
-			pos.y += speed;
+			pos.y += speed * Time.deltaTime;
 			// Updating position
 			this.transform.position = pos;
 		}
@@ -45,7 +45,7 @@ public class Moving : MonoBehaviour {
 			// Getting current position
 			Vector2 pos = this.transform.position;
 			// Changing position
-			pos.y -= speed;
+			pos.y -= speed * Time.deltaTime;
 			// Updating position
 			this.transform.position = pos;
 		}
